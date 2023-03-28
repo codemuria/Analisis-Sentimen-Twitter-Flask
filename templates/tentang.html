@@ -1,0 +1,94 @@
+{% include 'header.html' %}
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Tentang</h1>
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <div class="col-lg-4">
+
+                            <!-- Basic Card Example -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary text-center">Profil</h6>
+                                </div>
+                                <div class="card-body">
+                                    <img src="{{ url_for('static', filename='img/201851041.jpg') }}" class="img-fluid rounded mx-auto d-block" width="150px" alt="Responsive image">
+                                    <br>
+                                    <form>
+                                        <div class="form-group row">
+                                          <label for="staticEmail" class="col-sm-4 col-form-label">Nim</label>
+                                          <div class="col-sm-10">
+                                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="201851041">
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="staticEmail" class="col-sm-4 col-form-label">Nama</label>
+                                            <div class="col-sm-10">
+                                              <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="Muhammad Rifky Alfarez">
+                                          </div>
+                                        </div>
+                                      </form>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="col-lg-8">
+
+                            <!-- Basic Card Example -->
+                            <div class="card shadow mb-3">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Ringkasan</h6>
+                                </div>
+                                <div class="card-body text-justify">
+                                    Pada masa saat ini penganiayaan menjadi fenomena yang banyak diperbincangkan oleh masyarakat, fenomena tersebut beredar luas di media sosial yang banyak menimbulkan perspektif yang berbeda oleh masyarakat salah satunya di media sosial twitter. Untuk mengetahui perspektif masyarakat terhadap penganiayaan berdasarkan sentimen masyarakat melalui media sosial twitter, maka penulis membuat analisis sentimen yang berupa pandangan positif, negatif dan netral dengan menggunakan metode Support Vector Machine. Analisis dimulai dari pengumpulan data menggunakan API twitter, preprocessing, labeling dan untuk klasifikasinya menggunakan Support Vector Machine. Untuk bahasa pemrograman yang digunakan yaitu python dan data tweet yang di ambil sebanyak 2000 data. Berdasarkan eksperimen analisis sentimen yang sudah dilakukan oleh sistem mendapatkan tingkat akurasi 88.75%
+                                </div>
+                            </div>
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Find Me</h6>
+                                </div>
+                                <div class="card-body text-justify">
+                                    <a href="https://www.facebook.com/mralfarez404/" class="btn btn-primary btn-circle btn-sm">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="https://muhammadrifkyalfarez.blogspot.com" class="btn btn-primary btn-circle btn-sm">
+                                        <i class="fab fa-blogger"></i>
+                                    </a>
+                                    <a href="https://www.instagram.com/mr.alfarez/" class="btn btn-primary btn-circle btn-sm">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="https://twitter.com/mralfarez" class="btn btn-primary btn-circle btn-sm">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="https://www.youtube.com/channel/UC4EKJsb9KrSV9l888oJjW3w" class="btn btn-primary btn-circle btn-sm">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                    <a href="https://github.com/farezsyx" class="btn btn-primary btn-circle btn-sm">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://t.me/farezsyx" class="btn btn-primary btn-circle btn-sm">
+                                        <i class="fab fa-telegram"></i>
+                                    </a>
+                                    <a href="https://wa.me/6281251831405" class="btn btn-primary btn-circle btn-sm">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/muhammad-rifky-alfarez/" class="btn btn-primary btn-circle btn-sm">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+{% include 'footer.html' %}

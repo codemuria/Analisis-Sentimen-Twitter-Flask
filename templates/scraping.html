@@ -1,0 +1,86 @@
+{% include 'header.html' %}
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Scraping</h1>
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <div class="col-sm-12">
+                            <!-- card scraping -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Scraping Tweet Twitter</h6>
+                                </div>
+                                <div class="card-body">
+                                    <form method="POST" action="">
+                                        <div class="form-group">
+                                          <label for="jumlah">Total Data Scraping</label>
+                                          <input type="number" name="jumlah" class="form-control" min="1" max="10000" id="jumlahdata" value="1" placeholder="Total Data" autocomplete="off" required>
+                                        </div>
+                                        <div class="form-group">
+                                          <label for="keyword">Keyword</label>
+                                          <input value="Penganiayaan" type="text" name="keyword" class="form-control" id="keyword" placeholder="keyword scraping" autocomplete="off" required>
+                                        </div>
+                                        <input type="submit" name="scraping" class="btn btn-primary">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- DataTales Show -->
+                    {% if value %}
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">
+                                Hasil Scraping
+                                <a href="{{ url_for('static', filename='files/Data Scraping.csv') }}" target="blank" class="d-none d-sm-inline-block btn-sm btn-primary float-right shadow-sm"><i
+                                    class="fas fa-download fa-sm text-white-50"></i> Download Data</a>
+                            </h6>
+                            
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Tanggal</th>
+                                            <th>Username</th>
+                                            <th>Tweet</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Tanggal</th>
+                                            <th>Username</th>
+                                            <th>Tweet</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        {% set count = namespace(value=1) %}
+                                        {% for item in value %}
+                                        <tr>
+                                            <td>{{ count.value }}</td>
+                                            <td>{{ item[0] }}</td>
+                                            <td>{{ item[1] }}</td>
+                                            <td>{{ item[2] }}</td>
+                                        </tr>
+                                        {% set count.value = count.value + 1 %}
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+                <!-- /.container-fluid -->      
+{% include 'footer.html' %}
