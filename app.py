@@ -30,10 +30,10 @@ hasil_scraping = []
 
 def scraping_twitter_query(keyword, jumlah):
     #Setting API key
-    consumer_key = "Yp9wRBfTlf7DVVoe2CFQPyFPh"
-    consumer_secret = "14IYYfU5D4LUEQnT6gA2jL3vtSfggUA2IFmBIMRZlvwjHeW7vx"
-    access_token = "1349620922957799425-2tSJ4S8ujx3yz8J3YE1YvZNYUEPh1Y"
-    access_token_secret = "EymHozfbBNH5mMbMn15wFh7hQqeyRRUG0ThCYaF94F3Vw" 
+    consumer_key = ""
+    consumer_secret = ""
+    access_token = ""
+    access_token_secret = "" 
 
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
